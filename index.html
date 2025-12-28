@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Evosalud</title>
+  <link rel="shortcut icon" href="img/Evosal.png" />
+
+  <!-- Bootstrap 5 (solo CSS por CDN: liviano y rápido) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS mínimo -->
+  <style>
+    :root { scroll-behavior: smooth; }
+    .hero{
+      min-height: 58vh;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("img/hor1.png") center/cover no-repeat;
+    }
+    .avatar-doctor { width:100%; height:220px; object-fit:cover; }
+    .img-card { width:100%; height:170px; object-fit:cover; }
+    .testi-img { width:76px; height:76px; object-fit:cover; border-radius:999px; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header simple (sin botones a otros módulos) -->
+  <header class="border-bottom bg-white">
+    <div class="container py-3 d-flex align-items-center justify-content-between gap-3">
+      <a href="#inicio" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img src="img/Evosal.png" alt="Logo Evosalud" width="44" height="44">
+        <div>
+          <div class="fw-bold text-dark fs-5 lh-1">Evosalud</div>
+          <div class="text-muted small">Tu bienestar, nuestra evolución constante</div>
+        </div>
+      </a>
+
+      <nav class="d-none d-md-flex gap-3">
+        <a class="text-decoration-none text-dark fw-semibold" href="#doctores">Doctores</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#servicios">Servicios</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#horarios">Horarios</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#testimonios">Testimonios</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#contactenos">Contacto</a>
+      </nav>
+    </div>
+
+    <!-- Menú móvil (sin JS: links en una fila con scroll) -->
+    <div class="d-md-none border-top bg-light">
+      <div class="container py-2 d-flex gap-3 overflow-auto">
+        <a class="text-decoration-none text-dark fw-semibold" href="#doctores">Doctores</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#servicios">Servicios</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#horarios">Horarios</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#testimonios">Testimonios</a>
+        <a class="text-decoration-none text-dark fw-semibold" href="#contactenos">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero d-flex align-items-center text-white">
+    <div class="container py-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold mb-2">Bienvenido a Clínica Evosalud</h1>
+          <p class="lead mb-4">Atención médica integral, humana y profesional para toda la familia.</p>
+
+          <div class="bg-white text-dark rounded-4 p-4 shadow-soft d-inline-block">
+            <div class="fw-bold mb-1">Agenda y orientación</div>
+            <div class="text-muted small">
+              Llámanos o escríbenos por WhatsApp para citas, consultas y disponibilidad.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="bg-white text-dark rounded-4 p-4 shadow-soft">
+            <div class="fw-bold mb-2">¿Por qué elegirnos?</div>
+            <ul class="mb-0 small text-muted">
+              <li>Profesionales calificados</li>
+              <li>Servicios clínicos esenciales</li>
+              <li>Atención presencial y virtual</li>
+              <li>Enfoque preventivo y humano</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main class="py-5">
+
+    <!-- DOCTORES (solo informativo, sin botones) -->
+    <section id="doctores" class="container mb-5">
+      <div class="mb-3">
+        <h2 class="fw-bold mb-1">Conoce a Nuestros Médicos</h2>
+        <p class="text-muted mb-0">Profesionales listos para atenderte.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <img src="img/DoctorTapia.png" class="avatar-doctor" alt="Dr. Josue Tapia" loading="lazy">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-1">Mario Mora</h3>
+              <p class="text-muted small mb-2">Medicina General</p>
+              <p class="small text-muted mb-0">Atención médica profesional y personalizada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <img src="img/doc2.png" class="avatar-doctor" alt="Dra. Susana Gonzalez" loading="lazy">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-1">Susana Gonzalez</h3>
+              <p class="text-muted small mb-2">Nutrición Clínica</p>
+              <p class="small text-muted mb-0">Acompañamiento nutricional con enfoque integral.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <img src="img/DoctoraMolina.png" class="avatar-doctor" alt="Dra. Karla Molina" loading="lazy">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-1">Shirley Molina</h3>
+              <p class="text-muted small mb-2">Ginecología y Obstetricia</p>
+              <p class="small text-muted mb-0">Atención segura y cercana para la salud femenina.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <img src="img/DoctorConstante.png" class="avatar-doctor" alt="Dr. Dario Constante" loading="lazy">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-1">Victor Morales</h3>
+              <p class="text-muted small mb-2">Oncología</p>
+              <p class="small text-muted mb-0">Acompañamiento especializado y humano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS + HORARIOS -->
+    <section class="container mb-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div id="servicios" class="mb-3">
+            <h2 class="fw-bold mb-1">Servicios Destacados</h2>
+            <p class="text-muted mb-0">Con enfoque humano y atención de calidad.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm">
+                <img src="img/ser1.png" class="img-card" alt="Unidad Oncológica" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Unidad Oncológica</h3>
+                  <p class="text-muted small mb-0">Acompañamiento con enfoque humano y científico.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm">
+                <img src="img/ser2.png" class="img-card" alt="Maternidad Evosalud" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Maternidad Evosalud</h3>
+                  <p class="text-muted small mb-0">Entorno seguro para mamá y bebé.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm">
+                <img src="img/ser3.png" class="img-card" alt="Chequeos Preventivos" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Chequeos Preventivos</h3>
+                  <p class="text-muted small mb-0">Detectar a tiempo hace la diferencia.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm">
+                <img src="img/ser4.png" class="img-card" alt="Control de Peso" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Control de Peso</h3>
+                  <p class="text-muted small mb-0">Abordaje integral con acompañamiento profesional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="d-grid gap-3">
+            <div class="card shadow-sm">
+              <img src="img/hor2.png" alt="Equipo médico" class="w-100" style="height:160px;object-fit:cover;" loading="lazy">
+            </div>
+
+            <section id="horarios" class="card shadow-sm">
+              <div class="card-body">
+                <h2 class="h5 fw-bold mb-3">🕓 Horarios de Atención</h2>
+                <p class="text-muted small">
+                  Brindamos atención médica <strong>presencial</strong> y <strong>virtual</strong>.
+                </p>
+
+                <ul class="list-unstyled small mb-3">
+                  <li class="mb-2">
+                    <strong>Lunes a Viernes:</strong> 08:00 – 18:00<br>
+                    <span class="text-muted">Consulta externa, laboratorio, farmacia y agendamiento.</span>
+                  </li>
+                  <li class="mb-2">
+                    <strong>Sábados:</strong> 08:00 – 13:00<br>
+                    <span class="text-muted">Atención ambulatoria y servicios limitados (con cita previa).</span>
+                  </li>
+                  <li>
+                    <strong>Domingos y Feriados:</strong> Cerrado<br>
+                    <span class="text-muted">Atención en línea solo para emergencias urgentes.</span>
+                  </li>
+                </ul>
+
+                <p class="small mb-0">
+                  📱 <strong>Contacto:</strong> +593 123 456 789<br>
+                  <span class="text-muted">WhatsApp disponible en horario laboral.</span>
+                </p>
+              </div>
+            </section>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-5" style="background:#0d6efd;">
+      <div class="container text-white">
+        <div class="mb-4">
+          <h2 class="fw-bold mb-1">Testimonios</h2>
+          <p class="mb-0 opacity-75">Lo que nuestros pacientes dicen sobre su experiencia</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-soft">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <img src="img/paciente1.jpg" alt="Paciente 1" class="testi-img" loading="lazy">
+                  <div>
+                    <div class="fw-bold text-dark">María Gómez</div>
+                    <div class="text-muted small">Paciente</div>
+                  </div>
+                </div>
+                <p class="text-dark mb-0">“Atención humana, profesional y rápida. Me sentí segura y acompañada.”</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-soft">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <img src="img/paciente2.avif" alt="Paciente 2" class="testi-img" loading="lazy">
+                  <div>
+                    <div class="fw-bold text-dark">Carlos Ramírez</div>
+                    <div class="text-muted small">Paciente</div>
+                  </div>
+                </div>
+                <p class="text-dark mb-0">“Clínica moderna y limpia. Excelente trato desde el primer momento.”</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-soft">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <img src="img/paciente3.webp" alt="Paciente 3" class="testi-img" loading="lazy">
+                  <div>
+                    <div class="fw-bold text-dark">Andrea López</div>
+                    <div class="text-muted small">Paciente</div>
+                  </div>
+                </div>
+                <p class="text-dark mb-0">“Diagnóstico claro y atención excelente. Recomendado.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER + MAPA -->
+  <footer id="contactenos" class="bg-dark text-white">
+    <div class="container py-5">
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <img src="img/Evosal.png" alt="Clínica Evosalud Logo" width="52" height="52" loading="lazy">
+            <div>
+              <div class="fw-bold">Clínica Evosalud</div>
+              <div class="text-white-50 small">Tu bienestar primero</div>
+            </div>
+          </div>
+          <p class="small text-white-50 mb-0">
+            Atención médica confiable, con enfoque humano y servicios esenciales.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="h6 fw-bold">Datos de contacto</h3>
+          <p class="small mb-1"><strong>Teléfono:</strong> +593 123 456 789</p>
+          <p class="small mb-1"><strong>Email:</strong> evosalud@salud.com.ec</p>
+          <p class="small mb-0"><strong>Dirección:</strong> Av. de los Shyris y 6 de Diciembre, Quito</p>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="h6 fw-bold">Ubicación</h3>
+          <div class="ratio ratio-16x9 rounded overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2649749441351!2d-78.48025983048759!3d-0.1783401313175207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a91c742f253%3A0x4afc2c6488eb0b38!2sAv.%20de%20los%20Shyris%20%26%206%20De%20Diciembre%2C%20Quito%20170135!5e0!3m2!1ses!2sec!4v1622739487761!5m2!1ses!2sec"
+              style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="small text-white-50 mt-2 mb-0">Mapa carga en modo “lazy” para no ralentizar el inicio.</p>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="text-center small text-white-50">
+        © 2025 Clínica Evosalud. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
